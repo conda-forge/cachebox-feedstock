@@ -10,5 +10,3 @@ github:
 provider:
   linux_aarch64: default
 test: native_and_emulated
-channel_sources:
-  - conda-forge/label/rust_dev,conda-forge
