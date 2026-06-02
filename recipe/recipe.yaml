@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "5.2.3"
+  version: "6.0.0"
 
 package:
   name: cachebox
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/c/cachebox/cachebox-${{ version }}.tar.gz
-  sha256: b1f68246685aa739bbbd2734befb1465363a1e1042407c154feadb065f17a099
+  sha256: 22eab2c8c9cb10e442c5aece69db34b86c84ff288d98f69103baa7c555521a4e
 
 build:
-  number: 1
+  number: 0
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
