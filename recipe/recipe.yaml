@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "6.2.6"
+  version: "6.2.7"
 
 package:
   name: cachebox
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/c/cachebox/cachebox-${{ version }}.tar.gz
-  sha256: ba2c2afe8f55ba5006327dd5e444d26a4bc49084653416bbab7d7f4989924395
+  sha256: f19d264922e51351e79ae28a2711f958008066687d823f9d295e1f55143b6894
 
 build:
   number: 0
