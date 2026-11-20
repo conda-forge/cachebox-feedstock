@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "6.2.10"
+  version: "6.2.11"
 
 package:
   name: cachebox
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/c/cachebox/cachebox-${{ version }}.tar.gz
-  sha256: 13310b136aaa75558855642a5d20d9d430566d9c4dbb5e733e9b68259a5b81b6
+  sha256: 1117259f379e173d5cb21817630427d78190e8a5f2363bfe11859ab7a30c6eb6
 
 build:
-  number: 1
+  number: 0
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
@@ -24,14 +24,14 @@ requirements:
         - python
         - cross-python_${{ target_platform }}
         - crossenv
-        - maturin ==1.14.1
+        - maturin ==1.15.0
     - ${{ compiler("c") }}
     - ${{ compiler("rust") }}
     - ${{ stdlib("c") }}
     - cargo-bundle-licenses
   host:
     - python
-    - maturin ==1.14.1
+    - maturin ==1.15.0
     - pip
   run:
     - python
